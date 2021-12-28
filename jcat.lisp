@@ -4,13 +4,13 @@
 
 ;; main categorical list
 
-(defvar main-cat '(mem-aid
+(defparameter main-cat '(memory
 		   motivation
-		   ob-look
+		   narrative
 		   people
 		   myself
 		   lessons
-		   creative-disc
+		   discription
 		   journaling
 		   book-notes
 		   dreams
@@ -19,10 +19,10 @@
 
 ;; Sublists
 
-
+;;------------------------
 ;; Memory Aid - This category is for when I write about things that have happened to me
 
-(defvar mem-aid '(SF
+(defparameter memory '(SF
 		  Commune
 		  friends
 		  encounters))
@@ -30,28 +30,183 @@
 
 ;; Memory Aid Sub-Categories
 
-(defvar SF '(walking
+(defparameter SF '(walking
 	     parks
 	     details))
 
-(defvar Commune '(forest-books
+(defparameter Commune '(forest-books
 		  Irving
 		  cooking
 		  garden
 		  criticism
 		  library))
 
-(defvar friends '(mark
+(defparameter friends '(Wichita
+		  Newton
+		  San-fran
+		  Sac-town
+		  Burrton))
+
+;; friends sub-categories
+
+(defparameter wichita '(brent
+		  tim
 		  scotty-megan
-		  travis
-		  brent))
+		  mark
+		  travis))
 
-(defvar encounters '(drugs
-		     random-encount))
+(defparameter San-fran '(irving
+		   sam
+		   jeanie))
 
+;;------------		   
+
+
+(defparameter encounters '(drugs
+		     random-event))
+
+
+
+;; -------------------------
 ;; Motivation - This catgory is for writing that motivates me
 
-(defvar motivation '(forest-of-focus
+(defparameter motivation '(forest-of-focus
+		     natural-behaviors
+		     making-progress))
+
+;; Motivation Sub-Categories
+
+(defparameter forest-of-focus '(where-2-begin
+			  finding-focus
+			  correct-mindset))
+
+(defparameter natural-behaviors '(universal-laws
+			    what-is-genuine-lasts))
+
+(defparameter making-progress '(patient-diligence
+			  working-toward-goals
+			  past-accomplishments))
+
+
+
+;; -------------------------
+;; Narrative - This catgory is for writings that are narratives illustrating an idea
+;; or event
+
+(defparameter narrative '(indifference-of-nature
+		    the-world-isnot-fair))
+
+
+
+
+
+
+;; -------------------------
+;; People - This catgory is for writings that are about society
+
+(defparameter people '(soical-influence
+		 extreme-behavior
+		 compassion
+		 selfish-behavior
+		 effects-of-media
+		 whole-vs-the-individual))
+
+
+
+
+
+;; -------------------------
+;; Myself - This catgory is for writings that are introspective
+
+(defparameter myself '(my-voice
+		 internal-conflict
+		 self-discovery))
+
+
+		 
+		 
+
+
+;; -------------------------
+;; Lessons - This catgory is for writings about lessons to be learned
+
+(defparameter lessons '(learning-from-failure
+		  time-tested-truths
+		  present-truths
+		  pattern-recognition))
+
+
+
+;; -------------------------
+;; Description - This catgory is for writings that describe things
+
+(defparameter description '(scenes
+		      objects
+		      people
+		      behavior))
+
+
+
+;; -------------------------
+;; Journaling - This catgory is for writings dealing with journaling
+
+(defparameter journaling '(recording-your-thoughts
+		     seeing-yourself-differently
+		     record-of-events
+		     outlet-of-emotion))
+
+
+;; -------------------------
+;; Book-notes - This catgory is for writings of notes taken from books
+;; categorized by authors first then title
+
+(defparameter book-notes '(media-cultural-studies
+		     martin-luther-king
+		     niklas-luhmann
+		     kenneth-burke))
+
+;;book-notes sub-categories
+		     
+(defparameter niklas-luhmann '(Social-systems
+			 Differentiation-of-society
+			 essays-on-self-reference))
+
+(defparameter kenneth-burke '(grammar-of-motives
+			rhetoric-of-motives))
+
+
+
+;; -------------------------
+;; Dreams - This catgory is for writings about dreams
+
+(defparameter dreams '(positive
+		 negative
+		 disorienting))
+
+
+;; -------------------------
+;; Ideas - This catgory is for writings about ideas
+
+(defparameter ideas '(projects
+		efficiency
+		organizing
+		thoughts))
+
+
+
+
+;; -------------------------
+;; Project-notes - This catgory is for writings about projects
+
+(defparameter project-notes '(writing
+			programming
+			ceramics
+			glass
+			painting
+			fabric))
+
+
+		      
 		     
 
 
@@ -88,9 +243,7 @@
 ;;  (defun describe-path (edge)
 ;;    `(there is a ,(caddr edge) going ,(cadr edge) from here.))
 
-(defun rem-one (lst)
-  (progn
-    (setq lst (reverse lst))
-    (pop lst)
-    (setq lst (reverse lst))))
+
+
+
 
