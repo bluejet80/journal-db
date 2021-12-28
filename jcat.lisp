@@ -11,7 +11,7 @@
 
 ;; Memory Aid - This category is for when I write about things that have happened to me
 
-(defvar mem-aid (list 'SF 'Commune 'friends 'encounters 'events 'traveling))
+(defvar mem-aid (list 'SF 'Commune 'friends 'encounters))
 
 
 ;; Memory Aid Sub-Categories
@@ -34,4 +34,33 @@
 
 ;; is it necessary to write a whole new file each time?
 ;; would that be easier than updating the variable values in an existing file?
+
+
+(defparameter *file-path* "~/lisp_prog/journal-db/cat-update.lisp")
+(defun write-list(list1 list2)
+  (with-open-file (out *file-path*
+		       :direction
+		       :output
+		       :if-exists
+		       :append
+		       :if-does-not-exist
+		       :create)
+   (format out "(defvar ~a '~a)~%" list1 list2)))
+
+
+;; ~/lisp_prog/journal-db/
+
+(defun update-db (rec)
+  (loop for item in rec
+	do (eval `(write-list ',item ,item))))
+
+
+;;  (defun describe-path (edge)
+;;    `(there is a ,(caddr edge) going ,(cadr edge) from here.))
+
+(defun rem-one (lst)
+  (progn
+    (setq lst (reverse lst))
+    (pop lst)
+    (setq lst (reverse lst))))
 
