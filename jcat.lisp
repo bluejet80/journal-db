@@ -4,25 +4,55 @@
 
 ;; main categorical list
 
-(defvar main-cat (list 'mem-aid 'motivation 'ob-look 'people 'myself 'lessons 'creative-disc 'journaling 'book-notes 'dreams 'ideas 'project-notes))
+(defvar main-cat '(mem-aid
+		   motivation
+		   ob-look
+		   people
+		   myself
+		   lessons
+		   creative-disc
+		   journaling
+		   book-notes
+		   dreams
+		   ideas
+		   project-notes))
 
 ;; Sublists
 
 
 ;; Memory Aid - This category is for when I write about things that have happened to me
 
-(defvar mem-aid (list 'SF 'Commune 'friends 'encounters))
+(defvar mem-aid '(SF
+		  Commune
+		  friends
+		  encounters))
 
 
 ;; Memory Aid Sub-Categories
 
-(defvar SF (list 'walking 'parks 'details))
+(defvar SF '(walking
+	     parks
+	     details))
 
-(defvar Commune (list 'forest-books 'Irving 'cooking 'garden 'criticism 'library))
+(defvar Commune '(forest-books
+		  Irving
+		  cooking
+		  garden
+		  criticism
+		  library))
 
-(defvar friends (list 'mark 'scotty-megan 'travis 'brent))
+(defvar friends '(mark
+		  scotty-megan
+		  travis
+		  brent))
 
-(defvar encounters (list 'drugs 'random-encount))
+(defvar encounters '(drugs
+		     random-encount))
+
+;; Motivation - This catgory is for writing that motivates me
+
+(defvar motivation '(forest-of-focus
+		     
 
 
 ;; I need to make a function that will read the value of the variable from
