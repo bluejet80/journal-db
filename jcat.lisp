@@ -10,7 +10,7 @@
 		   people
 		   myself
 		   lessons
-		   discription
+		   description
 		   journaling
 		   book-notes
 		   dreams
@@ -22,15 +22,16 @@
 ;;------------------------
 ;; Memory Aid - This category is for when I write about things that have happened to me
 
-(defparameter memory '(SF
-		  Commune
-		  friends
-		  encounters))
+(defparameter memory '(San-Francisco
+		       Commune
+		       friends
+               	       events
+		       walks))
 
 
 ;; Memory Aid Sub-Categories
 
-(defparameter SF '(walking
+(defparameter San-francisco '(walking
 	     parks
 	     details))
 
@@ -62,7 +63,7 @@
 ;;------------		   
 
 
-(defparameter encounters '(drugs
+(defparameter events '(drugs
 		     random-event))
 
 
@@ -72,7 +73,7 @@
 
 (defparameter motivation '(forest-of-focus
 		     natural-behaviors
-		     making-progress))
+		     progress))
 
 ;; Motivation Sub-Categories
 
@@ -83,7 +84,7 @@
 (defparameter natural-behaviors '(universal-laws
 			    what-is-genuine-lasts))
 
-(defparameter making-progress '(patient-diligence
+(defparameter progress '(patient-diligence
 			  working-toward-goals
 			  past-accomplishments))
 
